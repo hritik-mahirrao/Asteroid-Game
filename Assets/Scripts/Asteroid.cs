@@ -13,6 +13,7 @@ public class Asteroid : MonoBehaviour
     public float minSize = 0.35f;
     public float maxSize = 1.65f;
     public float movementSpeed = 50f;
+    public float deflectForce = 50f;
     public float maxLifetime = 30f;
 
     uint origHealth;
@@ -61,12 +62,19 @@ public class Asteroid : MonoBehaviour
                 CreateSplit();
             }
 
+            if (collision.collider.CompareTag("Asteroid"))
+            {
+                Vector2 deflectionDir = (collision.transform.position - transform.position).normalized;
+                rigidbody.AddForce(deflectionDir * deflectForce, ForceMode2D.Impulse);
+            }
+
             FindObjectOfType<GameManager>().AsteroidDestroyed(this);
 
             // Destroy the current asteroid since it is either replaced by two
             // new asteroids or small enough to be destroyed by the bullet
             Destroy(gameObject);
         }
+
     }
 
     private Asteroid CreateSplit()

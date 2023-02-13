@@ -156,4 +156,5 @@ MonoBehaviour:
   minSize: 0.35
   maxSize: 1.65
   movementSpeed: 50
+  deflectForce: 30
   maxLifetime: 30
