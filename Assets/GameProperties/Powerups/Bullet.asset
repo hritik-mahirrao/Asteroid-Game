@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d978a7fa8c904fa251d335bc2937d, type: 3}
+  m_Name: Bullet
+  m_EditorClassIdentifier: 
+  powerupPrefab: {fileID: 1516617292126257879, guid: 9c594304622ba9e4a95f86d0eb933b0d,
+    type: 3}
+  pickupPrefab: {fileID: 1516617292126257879, guid: dcb0efbb0cda14e4c8c3566a9e6b8029,
+    type: 3}
+  CurtPowerup: 1
+  powerUpDuration: 12
